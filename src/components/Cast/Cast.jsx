@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { movieActors } from '../services/api';
 import { List, Item, Image, Name, Character } from './Cast.styled';
 
-export const Cast = () => {
+const Cast = () => {
   const [cast, setCast] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -60,3 +60,5 @@ Cast.propTypes = {
   isLoading: PropTypes.bool,
   result: PropTypes.bool,
 };
+
+export default Cast

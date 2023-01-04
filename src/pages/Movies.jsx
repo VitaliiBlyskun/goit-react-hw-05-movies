@@ -5,7 +5,7 @@ import { moviesByName } from 'components/services/api';
 import { Form, Input, Button, List, Item } from './Movies.styled';
 import { MovieName } from 'components/MoviesListTemplate/MoviesListTemplate.styled';
 
-export const Movies = () => {
+const Movies = () => {
   const [query, setQuery] = useState([]);
   const [isLoading, setIsLoading] = useState(null);
   const [error, setError] = useState(null);
@@ -42,8 +42,6 @@ export const Movies = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-
-    console.log({ searchQuery: event.currentTarget.elements.searchQuery.value });
 
     const form = event.currentTarget;
     setSearchParams({ searchQuery: form.elements.searchQuery.value });
@@ -89,3 +87,4 @@ Movies.propTypes = {
   searchParams: PropTypes.object,
 };
 
+export default Movies

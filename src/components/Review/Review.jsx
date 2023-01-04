@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { movieReviews } from 'components/services/api';
 import { List, Item, Author, Review, Nothing } from './Review.styled';
 
-export const Reviews = () => {
+const Reviews = () => {
   const [review, setReview] = useState([]);
   const [isLoading, setIsLoading] = useState(null);
   const [error, setError] = useState(null);
@@ -56,3 +56,5 @@ Reviews.propTypes = {
   isLoading: PropTypes.bool,
   result: PropTypes.bool,
 };
+
+export default Reviews 

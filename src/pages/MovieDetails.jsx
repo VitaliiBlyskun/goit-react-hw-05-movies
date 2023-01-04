@@ -1,5 +1,6 @@
 import { useParams, Outlet, Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef, Suspense } from 'react';
+import PropTypes from 'prop-types';
 
 import { movieFullInfo } from '../../src/components/services/api';
 import {
@@ -20,7 +21,7 @@ import {
   ItemGenre,
 } from './MovieDetails.styled';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const [movie, setMovie] = useState([]);
   const [isLoading, setIsLoading] = useState(null);
   const [error, setError] = useState(null);
@@ -89,9 +90,18 @@ export const MovieDetails = () => {
           </List>
         </>
       )}
-      <Suspense fallback={<div>Loading ...</div>}>
+      <Suspense fallback={<p>Loading ...</p>}>
         <Outlet />
       </Suspense>
     </>
   );
 };
+
+MovieDetails.propTypes = {
+  movie: PropTypes.array,
+  error: PropTypes.any,
+  isLoading: PropTypes.bool,
+  result: PropTypes.bool,
+};
+
+export default MovieDetails

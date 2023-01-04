@@ -19,9 +19,11 @@ export const Image = styled.img`
 export const Name = styled.p`
   font-size: 14px;
   margin-bottom: 10px;
+  font-weight: bold;
 `;
 
 export const Character = styled.p`
   font-size: 14px;
   margin-bottom: 10px;
+  font-style: italic;
 `;

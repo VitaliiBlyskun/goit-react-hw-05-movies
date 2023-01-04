@@ -4,7 +4,7 @@ import { popularMovies } from "components/services/api";
 import { MoviesList } from "../components/MoviesListTemplate/MoviesListTemplate";
 import { Title } from "./Home.styled";
 
-export const Home = () => {
+const Home = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(null);
 
@@ -38,3 +38,5 @@ Home.propTypes = {
   isLoading: PropTypes.bool,
   result: PropTypes.bool,
 };
+
+export default Home
