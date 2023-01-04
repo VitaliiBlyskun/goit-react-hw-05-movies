@@ -33,7 +33,7 @@ export const Reviews = () => {
   return (
     <>
       {isLoading && 'Waiting for'}
-      {result === false && <p>We don't have any reviews for this movies</p>}
+      {result === false && <p>{error}. We don't have any reviews for this movies</p>}
       <List>
         {result === true &&
           review.map(({ id, author, content }) => (
